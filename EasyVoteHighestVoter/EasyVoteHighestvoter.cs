@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("EasyVote-HighestVoter", "Exel80 and tankbusta", "1.1.0", ResourceId = 2671)]
+    [Info("EasyVote-HighestVoter", "Exel80 and tankbusta", "1.1.1", ResourceId = 2671)]
     class EasyVoteHighestvoter : RustPlugin
     {
         // EasyVote is life and <3
@@ -133,7 +133,7 @@ namespace Oxide.Plugins
             }
 
             // If month doesnt match
-            if (_storedData.Month != DateTime.UtcNow.Month)
+            if (_storedData.Month != DateTime.Now.Month)
             {
                 string HighestPlayer = EasyVote?.Call("getHighestvoter").ToString();
                 List<string> steamIds = new List<string>();
